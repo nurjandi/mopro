@@ -13,6 +13,7 @@ public class Terima_Kasih extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_terima__kasih);
         btn = (Button)findViewById(R.id.kembali);
+        btn.setOnClickListener(this);
     }
 
     @Override

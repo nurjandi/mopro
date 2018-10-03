@@ -19,7 +19,7 @@ public class menu_makanan extends AppCompatActivity implements View.OnClickListe
     private int result;
     private String jml;
     private int loop;
-    int harga[] = {10000,25000,8000,6000,5000,8000};
+    int harga[] = {10000,15000,11000,8000,10000,12000};
     int total;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
