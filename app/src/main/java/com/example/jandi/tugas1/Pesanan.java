@@ -55,9 +55,8 @@ public class Pesanan extends AppCompatActivity implements View.OnClickListener{
 
     @Override
     public void onClick(View v) {
-        Intent intent = new Intent(Pesanan.this, MainActivity.class);
+        Intent intent = new Intent(Pesanan.this,Terima_Kasih.class);
         startActivity(intent);
-        finish();
     }
 
 }

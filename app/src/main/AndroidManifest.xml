@@ -22,7 +22,8 @@
         <activity android:name=".menu_makanan" />
         <activity
             android:name=".Pesanan"
-            android:label="@string/title_activity_pesanan"></activity>
+            android:label="@string/title_activity_pesanan" />
+        <activity android:name=".Terima_Kasih"></activity>
     </application>
 
 </manifest>
