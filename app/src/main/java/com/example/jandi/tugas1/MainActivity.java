@@ -12,16 +12,24 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-
+    Button btnMenu;
+    Button btnPanggil;
+    TextView hideText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button btnMenu = (Button)findViewById(R.id.tombolmenu);
+        btnMenu = (Button) findViewById(R.id.tombolmenu);
+        btnPanggil = (Button) findViewById(R.id.panggil);
+        hideText = (TextView) findViewById(R.id.tutup);
+        btnMenu.setVisibility(View.GONE);
+        btnPanggil.setVisibility(View.GONE);
+        hideText.setVisibility(View.GONE);
         btnMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -29,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
         
     }
     public void panggil(View view) {
@@ -37,6 +44,16 @@ public class MainActivity extends AppCompatActivity {
         Intent panggil = new Intent(Intent. ACTION_DIAL);
         panggil.setData(Uri. fromParts("tel",nomor,null));
         startActivity(panggil);
+    }
+    public void textUnHide(View view){
+        btnMenu.setVisibility(View.VISIBLE);
+        btnPanggil.setVisibility(View.VISIBLE);
+        hideText.setVisibility(View.VISIBLE);
+    }
+    public void textHide(View view){
+        btnMenu.setVisibility(View.GONE);
+        btnPanggil.setVisibility(View.GONE);
+        hideText.setVisibility(View.GONE);
     }
 
 }

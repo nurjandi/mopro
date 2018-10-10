@@ -25,6 +25,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:onClick="pesan1"
         >
         <TextView
             android:layout_width="wrap_content"
@@ -39,17 +40,20 @@
             android:textSize="18sp"
             android:layout_marginLeft="30dp"
             />
-        <EditText
-            android:layout_width="50dp"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="88dp"
-            android:id="@+id/editText1"
+            android:text="0"
+            android:textSize="18sp"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/food1"
             />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:onClick="pesan2"
         >
         <TextView
             android:layout_width="wrap_content"
@@ -64,17 +68,20 @@
             android:textSize="18sp"
             android:layout_marginLeft="30dp"
             />
-        <EditText
-            android:layout_width="50dp"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="88dp"
-            android:id="@+id/editText2"
+            android:text="0"
+            android:textSize="18sp"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/food2"
             />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:onClick="pesan3"
         >
         <TextView
             android:layout_width="wrap_content"
@@ -89,13 +96,16 @@
             android:textSize="18sp"
             android:layout_marginLeft="30dp"
             />
-        <EditText
-            android:layout_width="50dp"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="88dp"
-            android:id="@+id/editText3"
+            android:text="0"
+            android:textSize="18sp"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/food3"
             />
     </LinearLayout>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -107,6 +117,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:onClick="pesan4"
         >
         <TextView
             android:layout_width="wrap_content"
@@ -121,17 +132,20 @@
             android:textSize="18sp"
             android:layout_marginLeft="30dp"
             />
-        <EditText
-            android:layout_width="50dp"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="88dp"
-            android:id="@+id/editText4"
+            android:text="0"
+            android:textSize="18sp"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/food4"
             />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:onClick="pesan5"
         >
         <TextView
             android:layout_width="wrap_content"
@@ -146,17 +160,20 @@
             android:textSize="18sp"
             android:layout_marginLeft="30dp"
             />
-        <EditText
-            android:layout_width="50dp"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="88dp"
-            android:id="@+id/editText5"
+            android:text="0"
+            android:textSize="18sp"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/food5"
             />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:onClick="pesan6"
         >
         <TextView
             android:layout_width="wrap_content"
@@ -171,11 +188,13 @@
             android:textSize="18sp"
             android:layout_marginLeft="30dp"
             />
-        <EditText
-            android:layout_width="50dp"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:id="@+id/editText6"
+            android:text="0"
+            android:textSize="18sp"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/food6"
             />
     </LinearLayout>
     <Button
