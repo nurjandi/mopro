@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -57,6 +60,22 @@ public class Pesanan extends AppCompatActivity implements View.OnClickListener{
     public void onClick(View v) {
         Intent intent = new Intent(Pesanan.this,Terima_Kasih.class);
         startActivity(intent);
+    }
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.optionmenu, menu);
+        //getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId()==R.id.kembali){
+            Intent intent = new Intent(this, menu_makanan.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+        }
+        return true;
     }
 
 }

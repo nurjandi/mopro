@@ -1,15 +1,15 @@
 package com.example.jandi.tugas1;
 
 import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.text.InputType;
 import android.text.TextUtils;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -50,7 +50,7 @@ public class menu_makanan extends AppCompatActivity implements View.OnClickListe
         loop = 0;
         for(int i=0; i<6; i++){
             jml = txtView[i].getText().toString();
-            if(TextUtils.isEmpty(jml)){
+            if(jml.equals("0")){
                 jumlah[i] = 0;
                 loop = loop + 1;
             }
@@ -61,7 +61,7 @@ public class menu_makanan extends AppCompatActivity implements View.OnClickListe
             }
         }
         if(loop==6){
-            Toast.makeText(getApplicationContext(), "Ini adalah contoh Toast di Android",Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Isi Jumlah Makanan",Toast.LENGTH_LONG).show();
         }
         else{
             intent.putExtra("jumlah", jumlah);
@@ -111,6 +111,7 @@ public class menu_makanan extends AppCompatActivity implements View.OnClickListe
             }
         });
 
+        builder.show();
     }
     public void pesan3(View v){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -132,6 +133,7 @@ public class menu_makanan extends AppCompatActivity implements View.OnClickListe
             }
         });
 
+        builder.show();
     }
     public void pesan4(View v){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -153,6 +155,7 @@ public class menu_makanan extends AppCompatActivity implements View.OnClickListe
             }
         });
 
+        builder.show();
     }
     public void pesan5(View v){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -174,6 +177,7 @@ public class menu_makanan extends AppCompatActivity implements View.OnClickListe
             }
         });
 
+        builder.show();
     }
     public void pesan6(View v){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -195,5 +199,22 @@ public class menu_makanan extends AppCompatActivity implements View.OnClickListe
             }
         });
 
+        builder.show();
+    }
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.optionmenu, menu);
+        //getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId()==R.id.kembali){
+            Intent intent = new Intent(this, MainActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+        }
+        return true;
     }
 }
